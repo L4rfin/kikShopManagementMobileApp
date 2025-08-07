@@ -75,6 +75,7 @@ public class LoginActivity extends AppCompatActivity {
                 loadingProgressBar.setVisibility(View.GONE);
                 if (loginResult.getError() != null) {
                     showLoginFailed(loginResult.getError());
+                    return;
                 }
                 if (loginResult.getSuccess() != null) {
                     updateUiWithUser(loginResult.getSuccess());
@@ -84,6 +85,7 @@ public class LoginActivity extends AppCompatActivity {
                 //Complete and destroy login activity once successful
                 Intent i = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(i);
+
 
                 finish();
 

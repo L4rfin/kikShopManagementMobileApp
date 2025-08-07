@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.kikishop.databinding.FragmentHomeBinding;
+import com.example.kikishop.ui.inventory.InventoryActivity;
 import com.example.kikishop.ui.order.OrdersActivity;
 
 public class HomeFragment extends Fragment {
@@ -33,6 +34,14 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getActivity(), OrdersActivity.class);
+                startActivity(i);
+            }
+        });
+
+        binding.inventoryButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(), InventoryActivity.class);
                 startActivity(i);
             }
         });

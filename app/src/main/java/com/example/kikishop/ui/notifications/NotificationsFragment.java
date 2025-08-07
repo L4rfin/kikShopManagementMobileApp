@@ -1,5 +1,6 @@
 package com.example.kikishop.ui.notifications;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +12,8 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.kikishop.databinding.FragmentNotificationsBinding;
+import com.example.kikishop.ui.inventory.InventoryActivity;
+import com.example.kikishop.ui.order.OrdersActivity;
 
 public class NotificationsFragment extends Fragment {
 
@@ -23,6 +26,20 @@ public class NotificationsFragment extends Fragment {
 
         binding = FragmentNotificationsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
+        binding.ordersButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(), OrdersActivity.class);
+                startActivity(i);
+            }
+        });
+        binding.inventoryButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(), InventoryActivity.class);
+                startActivity(i);
+            }
+        });
 
         final TextView textView = binding.textNotifications;
         notificationsViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
