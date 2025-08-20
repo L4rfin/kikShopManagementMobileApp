@@ -12,6 +12,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KikiShop">
         <activity
+            android:name=".ui.order.received.OrderReceivedActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.order.processed.OrderProcessedActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.order.finished.OrderFinishActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.order.drop.OrderDropActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.inventory.InventoryActivity"
             android:exported="false" />
         <activity

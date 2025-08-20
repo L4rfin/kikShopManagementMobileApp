@@ -8,7 +8,7 @@ import java.util.List;
 public class DataBaseResults {
 
     private static DataBaseResults instance;
-
+    private int visitors;
     private int newOrders;
     private int totalOrders;
     private int itemsInNewOrders;
@@ -18,7 +18,21 @@ public class DataBaseResults {
     private ArrayList<BarEntry> itemsValue;
 
     private DataBaseResults() {
-        // inicjalizacja
+        //
+        visitors = 53;
+        newOrders = 23;
+        totalOrders = 62;
+        itemsInTotalOrders = 412;
+        itemsInNewOrders = 12;
+
+        itemsName = new String[]{"item1", "item2", "item3", "item4", "item5"};
+        ArrayList<BarEntry> itemValue = new ArrayList<>();
+        itemValue.add(new BarEntry(0, 3));
+        itemValue.add(new BarEntry(1, 13));
+        itemValue.add(new BarEntry(2, 31));
+        itemValue.add(new BarEntry(3, 53));
+        itemValue.add(new BarEntry(4, 33));
+        itemsValue = itemValue;
     }
 
     public static DataBaseResults getInstance() {
@@ -82,5 +96,13 @@ public class DataBaseResults {
 
     public void setItemsName(String[] itemsName) {
         this.itemsName = itemsName;
+    }
+
+    public int getVisitors() {
+        return visitors;
+    }
+
+    public void setVisitors(int visitors) {
+        this.visitors = visitors;
     }
 }

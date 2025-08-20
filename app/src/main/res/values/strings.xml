@@ -18,4 +18,19 @@
     <string name="items_amound">0</string>
     <string name="items">items</string>
     <string name="orders">orders</string>
+    <string name="top_sell">Top Seller</string>
+    <string name="top_s_img">top sale img</string>
+    <string name="inventory">inventory</string>
+    <string name="id">id:</string>
+    <string name="name">name:</string>
+    <string name="stock">stock:</string>
+    <string name="sale">sale:</string>
+    <string name="users">visitors:</string>
+    <string name="contact">contact</string>
+    <string name="pack">pack</string>
+    <string name="send">send</string>
+    <string name="newOreder">new</string>
+    <string name="processed">processed</string>
+    <string name="finish">finish</string>
+    <string name="delivered">delivered</string>
 </resources>

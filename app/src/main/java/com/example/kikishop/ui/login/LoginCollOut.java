@@ -19,22 +19,9 @@ public class LoginCollOut {
     }
 
     private void getDataFromDB() {
+        // coll to db for data, then set dbr to results from db
+
         DataBaseResults results = DataBaseResults.getInstance();
-        results.setItemsInNewOrders(23);
-        results.setItemsInTotalOrders(412);
-        results.setNewOrders(12);
-        results.setTotalOrders(62);
-
-        results.setItemsName(new String[]{"item1","item2","item3","item4","item5"});
-        ArrayList<BarEntry> itemValue= new ArrayList<>();
-        itemValue.add(new BarEntry(0,3));
-        itemValue.add(new BarEntry(1,13));
-        itemValue.add(new BarEntry(2,31));
-        itemValue.add(new BarEntry(3,53));
-        itemValue.add(new BarEntry(4,33));
-        results.setItemsValue(itemValue);
-
-
 
 
     }
